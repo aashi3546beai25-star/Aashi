@@ -1,35 +1,62 @@
 <!DOCTYPE html>
-<html>
-<head></head>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Light Box Animation</title>
+  <style>
+    body{
+      text-align: center;
+    }
+    a img{
+      height: 40vh;
+      width:20vw;
+      transition: transform 0.2s;
+    }
+    .lightbox{
+      background-color: rgba(0,0,0,0.8);
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+      opacity: 0;
+      pointer-events: none;
+      transition: opacity 1s;
+    }
+    .lightbox:target{
+      opacity: 1;
+      pointer-events: auto;
+    }
+    .close{
+      position: absolute;
+      top:0;
+      left:0;
+      width: 100%;
+      height: 100%;
+    }
+    a img:hover{
+      transform: scale(1.1);
+    }
+  </style>
+</head>
 <body>
-<h1>My First HTML Page.</h1>
-<h2>Learning Basic HTML Tags.</h2>
-<p>The is my first paragraph. I am learning <b>basic HTML tags.</b></p>
-<p>HTML stands for HyperText Markup Language.</p>
-<h3>Text Formatting Examples.</h3>
-<p>This text is <b>bold</b> using the strong tag. <br>
-<br> 
-This text is <strong>strong</strong> using the strong tag.<br> 
-<br>
-This text is <i>italic</i> using i tag.<br>
-<br>
-This text is <u>underline</u> using the u tag.<br> 
-<br>
-This text is <strike>strike</strike> using the strike tag.<br>
-<br>
-This text is <big>big</big> using the big tag.<br>
-<br>
-This Text is <small>small</small> using the small tag.
-<br></p>
-<h3>Mathematical Expression</h3>
-<p> Water formula: H<sub>2</sub>O<br>
-<br>
-Einstien's equation: E = mc<sup>2</sup><br>
-<br>
-Chemical formula of glucose: C<sub>6</sub>H<sub>12</sub>O<sub>6</sub>
+  <a href="#img1"><img src="https://play-lh.googleusercontent.com/VRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM" alt="insta"></a>
+  <a href="#img2"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXN9xSEe8unzPBEQOeAKXd9Q55efGHGB9BA&s" alt="fb"></a>
+  <a href="#img3"><img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2491px-Logo_of_Twitter.svg.png" alt="twitter"></a>
 
+  <div class="lightbox" id="img1">
+    <a href="#" class="close"></a>
+    <img src="https://play-lh.googleusercontent.com/VRMWkE5p3CkWhJs6nv-9ZsLAs1QOg5ob1_3qg-rckwYW7yp1fMrYZqnEFpk0IoVP4LM" alt="insta">
+  </div>
+  <div class="lightbox" id="img2">
+    <a href="#" class="close"></a>
+    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQiXN9xSEe8unzPBEQOeAKXd9Q55efGHGB9BA&s" alt="fb">
+  </div>
+  <div class="lightbox" id="img3">
+    <a href="#" class="close"></a>
+    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/6/6f/Logo_of_Twitter.svg/2491px-Logo_of_Twitter.svg.png" alt="twitter">
+  </div>
 
-
-
-
-
+</body>
+</html>
